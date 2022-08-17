@@ -15,70 +15,68 @@ dt,
 dd,
 ul,
 li {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  /*デフォルトの文字色、font-familyを予め当てておく*/
-  color: #474a4d;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #474a4d;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
 a {
-  /*下線を消す*/
-  text-decoration: none;
-  /*色を消す*/
-  color: inherit;
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
 }
 
 ul {
-  /*左の「・」を消す*/
-  list-style: none;
+    /*左の「・」を消す*/
+    list-style: none;
 }
 
 img {
-  max-width: 100%;
-  vertical-align: bottom;
-  border: none;
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
 }
-
 
 /* ここからwork2 */
 
-.service{
+.service {
     background: #eeeeee;
     padding-top: 80px;
 }
 
-.service h2{
+.service h2 {
     color: #0d8272;
     font-size: 30px;
     text-align: center;
     margin-bottom: 70px;
 }
 
-.service_wrap{
+.service_wrap {
     max-width: 960px;
     margin: 0 auto;
     padding: 50px 10px;
 }
 
-.service_wrap > div{
+.service_wrap > div {
     display: flex;
     justify-content: space-between;
-
 }
 
-.service_detail{
+.service_detail {
     width: 31.5%;
     background: #ffffff;
 }
 
-.service_content_wrap{
+.service_content_wrap {
     padding: 10px;
 }
 
-.service_detail h3{
+.service_detail h3 {
     color: #0d8272;
     font-size: 24px;
     margin-bottom: 10px;
@@ -87,27 +85,30 @@ img {
     padding-left: 5px;
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 400px) {
+    .service_wrap {
+        padding: 30px 10px;
+    }
 
-.service_wrap{
-    padding: 30px 10px;
-}
+    .service h2 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
 
-.service h2{
-    font-size: 20px;
-    margin-bottom: 30px;
-}
+    .service_wrap > div {
+        display: block;
+    }
 
-.service_wrap > div{
-    display: block;
-}
+    .service_detail {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 
-.service_detail{
-    width: 100%;
-    margin-bottom: 30px;
-}
+    .service_detail img {
+        width: 100%;
+    }
 
-.service_detail:last-child{
-    margin-bottom: 0;
-}
+    .service_detail:last-child {
+        margin-bottom: 0;
+    }
 }
