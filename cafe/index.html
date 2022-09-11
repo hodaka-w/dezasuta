@@ -7,8 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>デザインカフェ</title>
     <meta name="description" content="デザインカフェのサイトです。">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 
@@ -19,6 +26,12 @@
                 <picture>
                     <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
                     <img src="images/pc_first-100.jpg" alt="店内の様子">
+                </picture>
+            </li>
+            <li>
+                <picture>
+                    <source srcset="images/sp_main_vs_2@2x-100.jpg" media="(max-width:767px)">
+                    <img src="images/slider_2.jpg" alt="店内の様子">
                 </picture>
             </li>
         </ul>
@@ -90,23 +103,17 @@
         </h2>
         <div class="menu_wrap">
             <div class="menu_item">
-                <p>
-                    <img src="images/pc_menu_drink-100.jpg" alt="Drink">
-                </p>
+                <img src="images/pc_menu_drink-100.jpg" alt="Drink">
                 <h3>Drink</h3>
                 <p>ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
             </div>
             <div class="menu_item">
-                <p>
-                    <img src="images/pc_menu_food-100.jpg" alt="Food">
-                </p>
+                <img src="images/pc_menu_food-100.jpg" alt="Food">
                 <h3>Food</h3>
                 <p>フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
             </div>
             <div class="menu_item">
-                <p>
-                    <img src="images/pc_menu_sweets-100.jpg" alt="Sweets">
-                </p>
+                <img src="images/pc_menu_sweets-100.jpg" alt="Sweets">
                 <h3>Sweets</h3>
                 <p>スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
             </div>
@@ -119,11 +126,18 @@
             <img src="images/gallery@2x.png" alt="GALLERY">
         </h2>
         <ul class="slider">
-            <li><img src="images/pc_gallary_05-100.jpg" alt="gallary05"></li>
-            <li><img src="images/pc_gallary_04-100.jpg" alt="gallary04"></li>
-            <li><img src="images/pc_gallary_03-100.jpg" alt="gallary03"></li>
-            <li><img src="images/pc_gallary_02-100.jpg" alt="gallary02"></li>
-            <li><img src="images/pc_gallary_01-100.jpg" alt="gallary01"></li>
+            <li><a href="images/pc_gallary_05-100.jpg" data-lightbox="roadtrip"><img src="images/pc_gallary_05-100.jpg"
+                        alt="gallary05"></a></li>
+            <li><a href="images/pc_gallary_04-100.jpg" data-lightbox="roadtrip"><img src="images/pc_gallary_04-100.jpg"
+                        alt="gallary04"></a></li>
+            <li><a href="images/pc_gallary_03-100.jpg" data-lightbox="roadtrip"><img src="images/pc_gallary_03-100.jpg"
+                        alt="gallary03"></a></li>
+            <li><a href="images/pc_gallary_02-100.jpg" data-lightbox="roadtrip"><img src="images/pc_gallary_02-100.jpg"
+                        alt="gallary02"></a></li>
+            <li><a href="images/pc_gallary_01-100.jpg" data-lightbox="roadtrip"><img src="images/pc_gallary_01-100.jpg"
+                        alt="gallary01"></a></li>
+            <li><a href="images/pc_gallary_01-100.jpg" data-lightbox="roadtrip"><img src="images/pc_gallary_01-100.jpg"
+                        alt="gallary01"></a></li>
         </ul>
     </section>
 
@@ -190,6 +204,51 @@
             $('.sp_btn, .sp_nav ul li').on('click', function () {
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
+            });
+            // ページトップフェードイン
+            $('.pagetop').hide(); // デフォルトでボタンを隠しておく
+            $(window).on('scroll', function () { // ウィンドウをスクロールした時に発火
+                if ($(this).scrollTop() > 200) { // スクロール値が200以上になったら
+                    $('.pagetop').fadeIn(); // フェードイン
+                } else {
+                    $('.pagetop').fadeOut(); // フェードアウト
+                }
+            });
+            // ヘッダースライダー
+            $('.header_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+            });
+            // ギャラリー　スライダー
+            $(document).ready(function () {
+                $('.slider').slick({
+                    dots: false,
+                    infinite: true,
+                    arrows: true,
+                    speed: 300,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    prevArrow: '<span class="prev-arrow">&lt;</span>',
+                    nextArrow: '<span class="next-arrow">&gt;</span>',
+
+                    responsive: [
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                slidesToShow: 1,
+                            },
+                        },
+                    ],
+                });
+                // 画像を拡大表示
+                lightbox.option({
+                    'resizeDuration': 200,
+                    'wrapAround': true
+                })
             });
         });
     </script>
