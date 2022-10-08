@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
@@ -222,34 +222,30 @@
                 arrows: false,
             });
             // ギャラリー　スライダー
-            $(document).ready(function () {
-                $('.slider').slick({
-                    dots: false,
-                    infinite: true,
-                    arrows: true,
-                    speed: 300,
-                    slidesToShow: 5,
-                    slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 2000,
-                    prevArrow: '<span class="prev-arrow">&lt;</span>',
-                    nextArrow: '<span class="next-arrow">&gt;</span>',
+            $('.slider').slick({
+                dots: false,
+                infinite: true,
+                arrows: true,
+                speed: 300,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
 
-                    responsive: [
-                        {
-                            breakpoint: 767,
-                            settings: {
-                                slidesToShow: 1,
-                            },
+                responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
                         },
-                    ],
-                });
-                // 画像を拡大表示
-                lightbox.option({
-                    'resizeDuration': 200,
-                    'wrapAround': true
-                })
+                    },
+                ],
             });
+            // 画像を拡大表示
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true
+            })
         });
     </script>
 </body>
