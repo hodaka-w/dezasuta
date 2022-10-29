@@ -7,124 +7,256 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>third one nine</title>
     <meta name="description" content="渡辺穂高ポートフォリオ">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
+
+
 <body>
-
-    <div class="header">
-        <picture>
-            <source srcset="images/fv_sp.jpg" media="(max-width:767px)">
-            <img src="images/fv_pc-100.jpg" alt="ガーベラ背景">
-        </picture>
-    </div>
-    </div>
-
     <!-- ヘッダー -->
-    <div class="header_wrap">
-        <h1 class="header_logo"><img src="images/third one nine_logo@2x.png" alt="third one nine"></h1>
-        <nav class="nav">
-            <ul>
-                <li><a href="#about">about</a></li>
-                <li><a href="#service">service</a></li>
-                <li><a href="#work">work</a></li>
-                <li><a href="#contact">contact</a></li>
-            </ul>
-        </nav>
-    </div>
+    <header>
+        <div class="header_wrap">
+            <h1 class="header_logo">
+                <img src="images/third one nine_logo@2x.png" alt="third one nine のロゴ">
+            </h1>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#service">service</a></li>
+                    <li><a href="#work">work</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ファーストビュー -->
+    <main>
+        <section id="main_visual" class="main_visual">
+            <div class="main_visual_wrap">
+                <div class="main_ttl load-fade copy02">
+                    <h2>
+                        <img src="images/zenshin@2x@2x-100.png" alt="前進">
+                    </h2>
+                </div>
+            </div>
+        </section>
+    </main>
+
 
     <!-- アバウト -->
     <section id="about" class="about">
-        <h2 class="about_image_sp">
+        <h2 class="about_ttl_sp">
             <img src="images/about@2x.png" alt="about">
         </h2>
-        <div style=>
-            <picture>
-                <source srcset="images/about@2x.png" media="(max-width:767px)">
-                <img class="about_img" style="height: 200px; width: auto;" src="images/hodaka-100.jpg" alt="自分の紹介写真">
-            </picture>
-            <div class="about_ttl">
-                <h2 class="about_image_pc">
-                    <img src="images/" alt="about">
-                </h2>
+        <div class="about_wrap fadeUpTrigger">
+            <img class="about_photo" src="images/hodaka-100.jpg" alt="自分の紹介写真">
+            <div class="about_block">
                 <p class="about_subttl">
                     Hi,
                     <br>
                     I'm Hodaka!
                 </p>
-                <p class="about_tex">
+                <p class="about_tex_1">
+                    WATANABE HODAKA
+                    <br>
+                </p>
+                <p class="about_tex_2">
                     1991年生まれ 千葉県出身
                     <br>
+                </p>
+                <p class="about_tex_3">
                     【好きなもの】
                     <br>
-                    韓国ドラマ・オムライス・山・自転車
+                    韓国ドラマ・ライブ・山・自転車
                 </p>
             </div>
         </div>
+        <h2 class="about_ttl">
+            <img src="images/about@2x.png" alt="about タイトル">
+        </h2>
+        <div class="about_image_mountain">
+            <img src="images/mountain_1@2x.png" alt="aboutの山">
+        </div>
+    </section>
 
-        <!-- サービス -->
-        <section id="service" class="service">
-            <h2>
-                <img src="images/service@2x.png" alt="service">
-            </h2>
-            <div class="service_wrap">
-                <div class="service_item">
-                    <img src="images/design_icon@2x.png" alt="Web site design">
-                    <h3>Web site design</h3>
-                    <p>目的や想いを届けるWebサイト・ライティングページ(LP)のデザインを作成いたします。</p>
+    <!-- サービス -->
+    <section id="service" class="service fadeUpTrigger">
+        <h2 class="service_sp_ttl">
+            <img src="images/service@2x.png" alt="sp service タイトル">
+        </h2>
+        <h2 class="service_ttl">
+            <img src="images/service@2x.png" alt="service タイトル">
+        </h2>
+        <div class="inner">
+            <div class="service_box_area">
+                <div class="box">
+                    <p class="img_icon">
+                        <img src="images/design_icon@2x.png" alt="Web site design アイコン">
+                    </p>
+                    <p class="service_sml_ttl">
+                        <img src="images/design@2x.png" alt="Web site design タイトル">
+                    </p>
+                    <p class="service_text">
+                        目的や想いを届けるWebサイト・ライティングページ(LP)のデザインを作成いたします。
+                    </p>
                 </div>
-                <div class="service_item">
-                    <img src="images/cording_icon@2x.png" alt="coding">
-                    <h3>coding</h3>
-                    <p>TIMLとCSSを使用したコーディングが可能です。JavaScriptにて様々な動きをつけることも可能です。</p>
+                <div class="box">
+                    <p class="img_icon">
+                        <img src="images/cording_icon@2x.png" alt="coding アイコン">
+                    </p>
+                    <p class="service_sml_ttl">
+                        <img src="images/cording@2x.png" alt="coding タイトル">
+                    </p>
+                    <p class="service_text">
+                        HTMLとCSSを使用したコーディングが可能です。JavaScriptにて様々な動きをつけることも可能です。
+                    </p>
                 </div>
-                <div class="service_item">
-                    <img src="images/copying_icon@2x.png" alt="copying">
-                    <h3>copying</h3>
-                    <p>宛名や招待状・命名書から企業理念など毛筆全般の筆耕をいたします。丁寧に心をこめてお書きします。</p>
+                <div class="box">
+                    <p class="img_icon">
+                        <img src="images/copying_icon@2x.png" alt="copying アイコン">
+                    </p>
+                    <p class="service_sml_ttl">
+                        <img src="images/copying@2x.png" alt="copying タイトル">
+                    </p>
+                    <p class="service_text">
+                        宛名や招待状・命名書から企業理念など毛筆全般の筆耕をいたします。丁寧に心をこめてお書きします。
+                    </p>
                 </div>
             </div>
-
-            <!-- ワーク -->
-            <section id="work" class="work">
-                <h2>
-                    <img src="images/work@2x.png" alt="work">
-                </h2>
-                <div class="service_wrap">
-                    <div class="service_item">
-                        <img src="images/design_gallary_01-100.jpg" alt="01 カフェサイト">
-                        <h3>カフェサイト</h3>
-                        <p>カテゴリ・・・バナー
-                            使用ツール・・・・Illustrator / Photoshop
-                        </p>
-                    </div>
-                    <div class="service_item">
-                        <img src="images/copying_gallary_02-100.jpg" alt="02 彩　書道">
-                        <h3>筆耕</h3>
-                        <p>カテゴリ・・・バナー
-                            使用ツール・・・・Illustrator / Photoshop</p>
-                    </div>
-                    <div class="service_item">
-                        <img src="images/baner_gallary_03-100.jpg" alt="03 キャンプバナー">
-                        <h3>キャンプフェス　バナー</h3>
-                        <p>カテゴリ・・・バナー
-                            使用ツール・・・・Illustrator / Photoshop</p>
-                    </div>
-                </div>
-                <!-- コンタクト -->
-                <section id="contact" class="contact">
-
-                </section>
-
-
-
-            </section>
-
-
-
-        </section>
-
         </div>
+    </section>
+
+    <!-- ワーク -->
+    <section id="work" class="work">
+        <h2 class="work_ttl_sp">
+            <img src="images/work@2x.png" alt="work タイトル">
+        </h2>
+        <div class="work_wrap fadeUpTrigger">
+            <div class="work_block_item">
+                <div class="work_block_ttl">
+                    <img src="images/01@2x.png" alt="01">
+                </div>
+                <img src="images/design_gallary_01@2x-100.jpg" alt="01 カフェサイト作品">
+                <h3>●カフェサイト</h3>
+                <p>カテゴリ・・・ランディングページ
+                    <br>
+                    ツール・・・・Illustrator / Photoshop
+                </p>
+            </div>
+            <div class="work_block_item">
+                <div class="work_block_ttl">
+                    <img src="images/02@2x.png" alt="02">
+                </div>
+                <img src="images/copying_gallary_02-100@2x-100.jpg" alt="02 彩　書道作品">
+                <h3>●筆耕</h3>
+                <p>カテゴリ・・・バナー
+                    <br>
+                    ツール・・・・毛筆
+                </p>
+            </div>
+            <div class="work_block_item">
+                <div class="work_block_ttl">
+                    <img src="images/03@2x.png" alt="03">
+                </div>
+                <img src="images/baner_gallary_03@2x-100.jpg" alt="03 キャンプバナー作品">
+                <h3>●キャンプフェス　バナー</h3>
+                <p>カテゴリ・・・バナー
+                    <br>
+                    ツール・・・・Illustrator / Photoshop
+                </p>
+                <h2 class="work_ttl">
+                    <img src="images/work@2x.png" alt="work タイトル">
+                </h2>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- コンタクト -->
+    <section id="contact" class="contact fadeUpTrigger">
+        <h2>
+            <img src="images/contact_1@2x.png" alt="contact タイトル">
+        </h2>
+        <p class="contact_text">
+            無料相談、zoomでのお打ち合わせも可能です。
+            <br>
+            お気軽にお問合せください。
+        </p>
+        <form class="c_form"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdCcg5tuL9eeOgCWEQoUbmUWLFp2gGRuK1UTmDlORXeHBQhmg/formResponse"
+            method="post" target="hidden_iframe" onsubmit="submitted=true;">
+            <input type="text" name="entry.1399597897" id="name" placeholder="お名前" class="c_form_name">
+            <input type="text" name="entry.621900268" id="e-mail" placeholder="example@mail.co.jp" class="c_form_email">
+            <textarea name="entry.280046141" id="contact_us" placeholder="お問合せ内容" class="c_form_msg"></textarea>
+            <input type="submit" value="▶︎ 無料でお問い合わせする" class="c_form_btn">
+
+            <div class="contact_image_mountain">
+                <img src="images/mountain_3@2x.png" alt="一番下の山">
+            </div>
+        </form>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="footer_block">
+            <div class="footer_logo">
+                <img src="images/footer_logo@2x.png" alt="フッターロゴ">
+            </div>
+            <div class="footer_img">
+                <picture>
+                    <source srcset="images/footer_copy_sp@2x.png" media="(max-width:767px)">
+                    <img src="images/footer_copy@2x.png" alt="フッターコピー">
+                </picture>
+            </div>
+            <div class="footer_tex">
+                <p>@2022 third one nine.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(function () {
+            //ここの中に記述
+            $('.sp_btn, .sp_nav ul li').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            });
+        });
+        // フェードイン
+        $(window).scroll(function () {
+            const windowHeight = $(window).height();
+            const scroll = $(window).scrollTop();
+
+            $('.fadeUpTrigger').each(function () {
+                const targetPosition = $(this).offset().top;
+                if (scroll > targetPosition - windowHeight + 100) {
+                    $(this).addClass("is-fadein");
+                }
+            });
+        });
+        $(function () {
+            load_effect();
+            $(window).scroll(function () {
+                scroll_effect();
+            });
+        });
+
+        //ふわっとロード
+        function load_effect() {
+            var tt = $(window).scrollTop();
+            var hh = $(window).height();
+            $('.load-fade').each(function () {
+                let delay = 1000;
+                var yy = $(this).offset().top;
+                if (tt > yy - hh) {
+                    $(this).addClass('done');
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
